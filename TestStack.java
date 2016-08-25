@@ -141,7 +141,10 @@ public class TestStack {
 	                break;                 
 	            case 6 : 
 	                System.out.println("Size = " + stack.getSize());
-	                break;                         
+	                break;         
+	            case 7 : 
+	                System.exit(0);
+	                break;         
 	            default : 
 	                System.out.println("Wrong Entry \n ");
 	                break;
