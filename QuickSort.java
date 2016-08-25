@@ -46,7 +46,6 @@ public class QuickSort {
 			if(A[j] <= x){
 				i = i + 1;
 				swap(A, i, j);
-				
 			}
 		}
 		swap(A, i + 1, r);
