@@ -75,7 +75,7 @@ public class TestQueue {
 	            default : System.out.println("Wrong Entry \n ");
 	                break;
 	            }
-	            /* display Queue */
+	            /* Display Queue */
 	            q.display();            
 	            System.out.println("\nDo you want to continue (Type y or n) \n");
 	            ch = scan.next().charAt(0);
