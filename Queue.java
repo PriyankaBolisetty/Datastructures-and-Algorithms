@@ -4,24 +4,24 @@ import java.util.NoSuchElementException;
 
 public class Queue {
 	private int[] queueArray;
-	private int size, len, front, rear;
+	private int size, len, head, tail;
 	
 	public Queue(int size){
 		this.size = size;
 		len = 0;
 		queueArray = new int[size];
-		front = -1;
-		rear = -1;
+		head = -1;
+		tail = -1;
 	}
 	
 	//Check if the Queue is empty
 	public boolean isEmpty(){
-		return front == -1;
+		return head == tail;
 	}
 	
 	//Check if the Queue is full
 	public boolean isFull(){
-		return front == 0 && rear == size - 1;
+		return head == tail + 1 || head == 1 && tail == len;
 	}
 	
 	//Get the size of the Queue
@@ -34,30 +34,36 @@ public class Queue {
 		if(isEmpty()){
 			throw new NoSuchElementException("Underflow Exception");
 		}
-		return queueArray[front];
+		return queueArray[head];
 	}
 	
 	public void add(int i){
-		if (rear == -1) 
+		if (tail == -1) 
         {
-            front = 0;
-            rear = 0;
-            queueArray[rear] = i;
+            tail = 0;
+            head = 0;
+            queueArray[tail] = i;
         }
-        else if (rear + 1 >= size)
+        else if (tail + 1 >= size)
             throw new IndexOutOfBoundsException("Overflow Exception");
-        else if ( rear + 1 < size)
-        	queueArray[++rear] = i;    
+        else if ( tail + 1 < size)
+        	queueArray[++tail] = i;    
         len++ ;    
 	}
 	
 	public int remove(){
+		int removedElement;
 		if(isEmpty()){
 			throw new NoSuchElementException("Underflow Exception");
 		}
 		len--;
-		front++;
-		return queueArray[front]; 
+		removedElement = queueArray[head];
+		if(head == tail){
+			head = -1;
+			tail = -1;
+		}
+		head++;
+		return removedElement;
 	}
 	
 	//Display the Queue
@@ -69,7 +75,7 @@ public class Queue {
             System.out.print("Empty\n");
             return ;
         }
-        for (int i = front; i <= rear; i++)
+        for (int i = head; i <= tail; i++)
             System.out.print(queueArray[i]+" ");
         System.out.println();        
     }

@@ -11,7 +11,7 @@ public class TestQueue {
 	        System.out.println("Queue Test");
 	        System.out.println("Enter the size of Queue ");
 	        int n = scan.nextInt();
-	        /* creating object of class arrayQueue */
+	        /* creating object of class Queue */
 	        Queue q = new Queue(n);        
 	        /* Perform Queue Operations */        
 	        char ch;
@@ -37,7 +37,7 @@ public class TestQueue {
 	                }
 	                catch(Exception e)
 	                {
-	                    System.out.println("Error : " +e.getMessage());
+	                    System.out.println("Error: " +e.getMessage());
 	                }                         
 	                break;                         
 	            case 2 : 
@@ -47,7 +47,7 @@ public class TestQueue {
 	                }
 	                catch(Exception e)
 	                {
-	                    System.out.println("Error : " +e.getMessage());
+	                    System.out.println("Error: " +e.getMessage());
 	                }
 	                break;                         
 	            case 3 : 
@@ -57,7 +57,7 @@ public class TestQueue {
 	                }
 	                catch(Exception e)
 	                {
-	                    System.out.println("Error : "+e.getMessage());
+	                    System.out.println("Error: "+e.getMessage());
 	                }
 	                break;                            
 	            case 4 : 
