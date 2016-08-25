@@ -18,12 +18,13 @@ public class TestStack {
         do{
         	System.out.println("===================");
             System.out.println("Stack Operations");
-            System.out.println("1. push");
-            System.out.println("2. pop");
-            System.out.println("3. peek");
-            System.out.println("4. check empty");
-            System.out.println("5. check full");
-            System.out.println("6. size");
+            System.out.println("1. Push");
+            System.out.println("2. Pop");
+            System.out.println("3. Peek");
+            System.out.println("4. Check empty");
+            System.out.println("5. Check full");
+            System.out.println("6. Size");
+            System.out.println("7. Exit");
             System.out.println("===================");
             int choice = scan.nextInt();
             switch (choice)
