@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class TestStack {
 
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);        
+	
+	Scanner scan = new Scanner(System.in);        
         System.out.println("Stack Test\n");
         System.out.println("Enter Size of the Stack ");
         int size = scan.nextInt();
@@ -16,7 +17,7 @@ public class TestStack {
         /* Perform Stack Operations */
         char ch;
         do{
-        	System.out.println("===================");
+            System.out.println("===================");
             System.out.println("Stack Operations");
             System.out.println("1. push");
             System.out.println("2. pop");
