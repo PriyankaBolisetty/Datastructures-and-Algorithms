@@ -68,7 +68,10 @@ public class TestStack {
                 break;                 
             case 6 : 
                 System.out.println("Size = " + stack.getSize());
-                break;                         
+                break;          
+            case 7 : 
+                System.exit(0);
+                break;          
             default : 
                 System.out.println("Wrong Entry \n ");
                 break;
@@ -78,7 +81,7 @@ public class TestStack {
             stack.display();            
             System.out.println("\nDo you want to continue (Type y or n) \n");
             ch = scan.next().charAt(0);
- 
-	        } while (ch == 'Y'|| ch == 'y');                
+
+        } while (ch == 'Y'|| ch == 'y');                 
 	}
 }
