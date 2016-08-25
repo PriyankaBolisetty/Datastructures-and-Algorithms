@@ -155,6 +155,5 @@ public class TestStack {
 	            ch = scan.next().charAt(0);
 	 
 	        } while (ch == 'Y'|| ch == 'y');                 
->>>>>>> 8359296932c6b06a5e98eb83cc2e1e09bf1c2d13
 	}
 }
