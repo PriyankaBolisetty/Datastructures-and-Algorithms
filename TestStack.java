@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class TestStack {
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);        
-<<<<<<< HEAD
+	
+	Scanner scan = new Scanner(System.in);        
         System.out.println("Stack Test\n");
         System.out.println("Enter Size of the Stack ");
         int size = scan.nextInt();
