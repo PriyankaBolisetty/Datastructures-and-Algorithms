@@ -12,6 +12,6 @@ public class Pentagon implements Shape{
 	}
 	
 	public String toString(){
-		return "A Pentagon is created with " + sides + " sides";
+		return "A Pentagon is created with " + getSides() + " sides";
 	}
 }

@@ -12,6 +12,6 @@ public class Rectangle implements Shape{
 	}
 	
 	public String toString(){
-		return "A Rectangle is created with " + sides + " sides";
+		return "A Rectangle is created with " + getSides() + " sides";
 	}
 }

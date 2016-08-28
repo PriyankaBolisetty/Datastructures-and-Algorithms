@@ -12,6 +12,6 @@ public class Triangle implements Shape{
 	}
 	
 	public String toString(){
-		return "A Triangle is created with " + sides + " sides";
+		return "A Triangle is created with " + getSides() + " sides";
 	}
 }
