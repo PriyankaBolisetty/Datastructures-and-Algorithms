@@ -25,4 +25,20 @@ public class Mountain implements Comparable<Mountain>{
 	public int compareTo(Mountain otherMountain){
 		return name.compareTo(otherMountain.getName());
 	}
+	
+	//Overriding hashCode to check for the duplicate reference equality
+	@Override
+	public int hashCode() {
+		return name.hashCode();
+	}
+	
+	//Overriding equals to check for the duplicate object equality
+	@Override
+	public boolean equals(Object otherObj){
+		Mountain otherMtn = (Mountain)otherObj;
+		if(!(otherMtn instanceof Mountain)){
+			return false;
+		}
+		return getName().equals(otherMtn.getName());
+	}
 }
