@@ -38,4 +38,20 @@ public class Song implements Comparable<Song>{
 	public int compareTo(Song otherSong) {
 		return title.compareTo(otherSong.getTitle());
 	}
+	
+	//Overriding hashCode to check for the duplicate reference equality
+	@Override
+	public int hashCode() {
+		return title.hashCode();
+	}
+	
+	//Overriding equals to check for the duplicate object equality
+	@Override
+	public boolean equals(Object otherObj) {
+		Song otherSong = (Song)otherObj;
+		if(!(otherSong instanceof Song)){
+			return false;
+		}
+		return getTitle().equals(otherSong.getTitle());
+	}
 }

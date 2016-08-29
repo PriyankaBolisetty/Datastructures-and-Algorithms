@@ -26,17 +26,35 @@ public class Jukebox {
 	
 	public void go() {
 		getSongs();
+		System.out.println("List of all Songs in a file");
+		System.out.println("=====================================");
 		System.out.println(songList);
 		
 		//Using Collections.sort() method to sort all the Songs alphabetically
 		Collections.sort(songList);
+		System.out.println("\nList of all Songs sorted by Title");
+		System.out.println("=====================================");
 		System.out.println(songList);
 		
 		ArtistCompare artistCompare = new ArtistCompare();
 		
 		//Using Collections.sort() method to sort all the Songs based on an Artist 
 		Collections.sort(songList, artistCompare);
+		System.out.println("\nList of all Songs sorted by Artist");
+		System.out.println("=====================================");
 		System.out.println(songList);
+		
+		Set<Song> songSet = new HashSet<Song>();
+		songSet.addAll(songList);
+		System.out.println("\nRemoving duplicates using a HashSet");
+		System.out.println("=====================================");
+		System.out.println(songSet);
+		
+		Set<Song> songTreeSet = new TreeSet<Song>();
+		songTreeSet.addAll(songList);
+		System.out.println("\nSorting the Set using a TreeSet");
+		System.out.println("=====================================");
+		System.out.println(songTreeSet);
 	}
 	
 	void getSongs(){
