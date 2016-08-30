@@ -6,7 +6,7 @@ import cusutilities.cusdb.*;  // For testing purposes only
 
 /* We have a list of Customers (origCusList).   We have a list of customers who
    have recently ordered (recentOrders).   Some of the customers in recentOrders are
-   new customers, some are old.   We want to add the new customers to origCusList and 
+   new customers, some are old. We want to add the new customers to origCusList and 
    create a new Customer list (mergedList).   There should not be any duplicates in
    mergedList.   Thus if a Customer is in both the origCusList and the recentOrders list,
    then we should find the Customer only once in the merged list (not twice!).
@@ -24,9 +24,14 @@ public class UpdateCusList {
          mergedList = mergeCusLists(origCusList, recentOrders);
          print(mergedList);
          
-         //New code to remove duplicates
+         //Remove duplicates using a Set
          Set<Customer> customerSet = new HashSet<Customer>();
          
+         customerSet.addAll(mergedList);
+         print(customerSet);
+         
+         //Sorting the customers alphabetically
+         customerSet = new TreeSet<Customer>();
          customerSet.addAll(mergedList);
          print(customerSet);
     }
