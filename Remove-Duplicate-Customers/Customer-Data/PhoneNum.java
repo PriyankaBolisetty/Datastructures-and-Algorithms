@@ -1,6 +1,6 @@
 package cusutilities.cusdata;
 
-public class PhoneNum {
+public class PhoneNum implements Comparable<PhoneNum>{
     private Integer areaCode;
     private String localNum;
 
@@ -44,4 +44,14 @@ public class PhoneNum {
 			return false;
 		return true;
 	}
+    
+    @Override
+    public int compareTo(PhoneNum otherPhone){
+    	int diff = areaCode.compareTo(otherPhone.areaCode);
+    	if(diff != 0){
+    		return diff;
+    	}
+    	diff = localNum.compareTo(otherPhone.localNum);
+    	return diff;
+    }
 }

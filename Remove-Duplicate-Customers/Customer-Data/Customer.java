@@ -1,6 +1,6 @@
 package cusutilities.cusdata;
 
-public class Customer {
+public class Customer implements Comparable<Customer>{
     private Name name;
     private PhoneNum phone;
 
@@ -42,5 +42,15 @@ public class Customer {
     		return false;
     	}
     	return getName().equals(otherCustomer.getName()) && getPhone().equals(otherCustomer.getPhone());
+    }
+    
+    @Override
+    public int compareTo(Customer otherCustomer){
+    	int diff = getName().compareTo(otherCustomer.getName());
+    	if(diff != 0){
+    		return diff;
+    	}
+    	diff = getPhone().compareTo(otherCustomer.getPhone());
+    	return diff;
     }
 }

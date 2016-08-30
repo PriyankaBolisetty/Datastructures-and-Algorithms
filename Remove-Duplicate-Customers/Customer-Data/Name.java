@@ -1,6 +1,6 @@
 package cusutilities.cusdata;
 
-public class Name {
+public class Name implements Comparable<Name>{
     private String lastName;
     private String firstName;
 
@@ -42,5 +42,15 @@ public class Name {
     		return false;
     	}
     	return getFirstName().equals(otherName.getFirstName()) && getLastName().equals(otherName.getLastName());
+    }
+    
+    @Override
+    public int compareTo(Name otherName){
+    	int diff = getFirstName().compareTo(otherName.getFirstName());
+    	if(diff != 0){
+    		return diff;
+    	}
+    	diff = getLastName().compareTo(otherName.getLastName());
+    	return diff;
     }
 }
