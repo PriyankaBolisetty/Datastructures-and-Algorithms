@@ -7,6 +7,7 @@ public class StringPrograms {
 		sortString("this is a very beautiful world", "dthrl");
 		superReducedString("aaabccddd");
 		camelCase("saveChangesInTheEditor");
+		reverseWords("Do or do not, there is no try.");
 		compareTwoCharacters('b', 'b');
 	}
 	
@@ -64,6 +65,14 @@ public class StringPrograms {
 			System.out.println(eachStr);
 		}
 		System.out.println(counter);
+	}
+	
+	public static void reverseWords(String str) {
+		String[] words = str.split(" ");
+		int length = words.length;
+		for(int i = length - 1; i >= 0; i--){
+			System.out.print(words[i] + " ");
+		}	
 	}
 	
 	public static void compareTwoCharacters(Character c1, Character c2){
