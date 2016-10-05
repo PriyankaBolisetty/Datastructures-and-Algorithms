@@ -8,6 +8,7 @@ public class StringPrograms {
 		superReducedString("aaabccddd");
 		camelCase("saveChangesInTheEditor");
 		reverseWords("Do or do not, there is no try.");
+		reverseLettersInAllWords(str);
 		compareTwoCharacters('b', 'b');
 	}
 	
@@ -73,6 +74,20 @@ public class StringPrograms {
 		for(int i = length - 1; i >= 0; i--){
 			System.out.print(words[i] + " ");
 		}	
+	}
+	
+	public static void reverseLettersInAllWords(String str) {
+		String[] words = str.split(" ");
+		int length = words.length;
+		System.out.println();
+		for(int i = length - 1; i >= 0; i--){
+			int wordLength = words[i].length();
+			for(int j = wordLength - 1; j >= 0; j--){
+				System.out.print(words[i].charAt(j));
+			}
+			System.out.print(" ");
+		}
+		System.out.println();
 	}
 	
 	public static void compareTwoCharacters(Character c1, Character c2){
